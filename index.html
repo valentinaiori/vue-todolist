@@ -5,14 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js" 
-    integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
+        integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <title>Vue To Do List</title>
 </head>
 <body>
+    <div id="app">
+        <div class="container">
+            
+            <div class="todo-list-container">
+                <h1>My Todo List</h1>
+            <div class="add-todo-container">
+                <input 
+                type="text"
+                 v-model="newTodo" 
+                 placeholder="Inserisci un nuovo prodotto"
+                 />
+                <button @click="addTodo">Aggiungi</button>
+            </div>
+
+                <h2>Cose da fare:</h2>
+                <ul>
+                    <li v-for="todo in todos">{{ todo.text }}
+                        <span @click="deleteTodo(todo)">&cross;</span>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
