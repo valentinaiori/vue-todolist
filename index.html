@@ -15,6 +15,7 @@
     <div id="app">
         <div class="container">
             
+
             <div class="todo-list-container">
                 <h1>My Todo List</h1>
             <div class="add-todo-container">
@@ -28,8 +29,8 @@
 
                 <h2>Cose da fare:</h2>
                 <ul>
-                    <li v-for="todo in todos">{{ todo.text }}
-                        <span @click="deleteTodo(todo)">&cross;</span>
+                    <li v-for="(todo, index) in todos">{{ todo.text }}
+                        <span @click="deleteTodo(index)">&cross;</span>
                     </li>
                 </ul>
 

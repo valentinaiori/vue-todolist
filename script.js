@@ -73,13 +73,13 @@ const app = new Vue ({
             }
         },
 
-        deleteTodo(todoPosition){
-            const deleteItem = this.todos[todoPosition];
+        deleteTodo(index){
+            const deleteItem = this.todos[index];
             this.deletedTodos.push(deleteItem);
 
             const array = [];
             for ( let i = 0; i < this.todos.length; i++){
-                if ( i !== todoPosition){
+                if ( i !== index){
                     array.push(this.todos[i]);
                 }
             }
