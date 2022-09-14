@@ -15,21 +15,23 @@
     <div id="app">
         <div class="container">
             
+            <h1>MY TODO LIST</h1>
 
             <div class="todo-list-container">
-                <h1>My Todo List</h1>
+                
             <div class="add-todo-container">
                 <input 
                 type="text"
                  v-model="newTodo" 
-                 placeholder="Inserisci un nuovo prodotto"
+                 placeholder="Inserisci un nuovo task"
                  />
                 <button @click="addTodo">Aggiungi</button>
             </div>
 
                 <h2>Cose da fare:</h2>
                 <ul>
-                    <li v-for="(todo, index) in todos">{{ todo.text }}
+                    <li 
+                    v-for="(todo, index) in todos">{{ todo.text }}
                         <span @click="deleteTodo(index)">&cross;</span>
                     </li>
                 </ul>
