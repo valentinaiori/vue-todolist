@@ -40,3 +40,7 @@ h1{
 h2{
     margin-top: 30px;
 }
+
+.done{
+    text-decoration: line-through;
+}

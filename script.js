@@ -33,22 +33,22 @@ const app = new Vue ({
             {
                 product: 'latte',
                 text: 'comprare il latte',
-                done: 'true',
+                done: true,
             },
             {
                 product: 'pane',
                 text: 'comprare il pane',
-                done: 'false',
+                done: false,
             },
             {
                 product: 'farina',
                 text: 'comprare la farina',
-                done: 'true',
+                done: true,
             },
             {
                 product: 'verdura',
                 text: 'comprare la verdura',
-                done: 'false',
+                done: false,
             },
             {
                 product: 'frutta',
@@ -63,7 +63,7 @@ const app = new Vue ({
             const toDoToInsert = {
                 product: '', 
                 text: this.newTodo.trim(),
-                done: false}
+                done: false }
 
             this.newTodo = '';
             if (toDoToInsert.text.length > 0){

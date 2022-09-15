@@ -30,9 +30,11 @@
 
                 <h2>Cose da fare:</h2>
                 <ul>
-                    <li 
-                    v-for="(todo, index) in todos">{{ todo.text }}
-                        <span @click="deleteTodo(index)">&cross;</span>
+                    <li v-for="(todo, index) in todos">
+                        <div :class=" todo.done ? 'done' : '' ">{{ todo.text }}
+                            <span @click="deleteTodo(index)">&cross;</span>
+                        </div>
+                        
                     </li>
                 </ul>
 
